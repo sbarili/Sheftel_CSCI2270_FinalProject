@@ -10,7 +10,7 @@ using namespace std;
 void playGame(MoveData &data)
 {
     bool exit = false;
-    int userMove;
+    char userMove;
     int computerMove;
 
     do
@@ -25,13 +25,13 @@ void playGame(MoveData &data)
 
         switch (userMove)
         {
-            case 1:
-            case 2:
-            case 3:
+            case '1':
+            case '2':
+            case '3':
                 computerMove = data.getComputerMove();  //get computer's move
                 processMove(userMove, computerMove, data);
                 break;
-            case 0:
+            case '0':
                 exit = true;
                 break;
             default:
